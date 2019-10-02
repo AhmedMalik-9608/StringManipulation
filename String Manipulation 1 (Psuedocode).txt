@@ -1,0 +1,28 @@
+Declare Name1 : String
+Declare Name2 : String
+Declare Word1 : String
+Declare Word2 : String
+Declare FinalName : String
+Declare SpacePos : Integer
+
+Name1 = ""
+Name2 = ""
+Word1 = ""
+Word2 = ""
+FinalName = ""
+SpacePos = 0 
+
+OUTPUT "Enter the Full Name 1 : "
+Input Name1
+
+OUTPUT "Enter Full Name 2 : "
+Input Name2
+
+SpacePos = Locate(Name1, ' ')
+Word1 = Left(Name1, SpacePos)
+
+SpacePos = Locate(Name2, ' ')
+Word2 = Right(Name2, Length(Name2) - SpacePos)
+
+FinalName = Word1 & Word2
+Output FinalName
