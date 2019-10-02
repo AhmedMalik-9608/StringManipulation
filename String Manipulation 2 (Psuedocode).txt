@@ -1,0 +1,27 @@
+DECLARE String1 : STRING
+DECLARE String2 : STRING
+DECLARE charToRemove : CHARACTER
+DECLARE CurrentChar : CHARACTER 
+DECLARE Counter : INTEGER
+
+String1 = ""
+String2 = ""
+charToRemove = ''
+CurrentChar = ''
+Counter = 0
+
+OUTPUT "Enter String to be filtered: "
+INPUT String1
+
+OUTPUT "Enter character to be removed: "
+Input charToRemove
+
+FOR Counter = 1 TO Length(String1)
+    CurrentChar = MID(String1, Counter, 1)
+    IF CurrentChar <> charToRemove
+      THEN 
+        String2 = String2 & CurrentChar
+    END IF
+END FOR
+
+OUTPUT "Final string = " & String2
