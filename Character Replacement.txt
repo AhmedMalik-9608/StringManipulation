@@ -1,0 +1,33 @@
+DECLARE Str1 : STRING
+DECLARE FinalStr : STRING
+DECLARE charToRemove : STRING
+DECLARE replacingChar : STRING
+DECLARE CurrentChar : STRING
+DECLARE Count : Integer
+
+Count = 0
+Str1 = ""
+FinalStr = ""
+charToRemove = ""
+replacingChar = ""
+
+OUTPUT "Enter the string to Modify: "
+INPUT Str1
+
+OUTPUT "Enter the Character to be removed: "
+INPUT charToRemove
+
+OUTPUT "Enter the Character to Replace with: "
+INPUT replacingChar
+
+For Count = 1 To Length(Str1)
+    CurrentChar = Mid(Str1, Count, 1)
+    If CurrentChar = charToRemove 
+      Then
+          FinalStr = FinalStr & replacingChar
+        Else
+          FinalStr = FinalStr & CurrentChar
+    End If
+Next
+
+OUTPUT "The Modified String is: " & FinalStr
