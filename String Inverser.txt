@@ -1,0 +1,20 @@
+DECLARE InitialStr : STRING
+DECLARE FinalStr : STRING
+DECLARE CharToExamine : CHARACTER
+DECLARE Count : INTEGER
+
+Count = 0
+FinalStr = ""
+InitialStr = ""
+CharToExamine = ''
+
+OUTPUT "Enter The String to Inverse: "
+INPUT InitialStr
+
+For Count = 1 To Length(InitialStr)
+   CharToExamine = Mid(InitialStr, Count, 1)
+   FinalStr = CharToExamine & FinalStr
+Next
+
+OUTPUT "The Inverse of the String is: " & FinalStr
+
