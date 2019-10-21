@@ -1,0 +1,55 @@
+DECLARE Str1 : STRING
+DECLARE Str2 : STRING
+DECLARE Str3 : STRING 
+DECLARE char1 : CHARACTER
+DECLARE char2 : CHARACTER
+DECLARE Count1 : INTEGER
+DECLARE Count2 : INTEGER
+DECLARE hasChanged : BOOLEAN
+
+Str1 = ""
+Str2 = ""
+Str3 = ""
+char1 = ''
+char2 = ''
+Count1 = 0
+Count2 = 0
+hasChanged = False
+
+OUTPUT "Enter the first string: "
+INPUT Str1 
+OUTPUT "Enter the second string: "
+INPUT Str2
+
+If Length(Str1) <> Length(Str2)
+  Then
+      OUTPUT "The 2 strings are not Anagram to each other."
+  Else
+      For Count1 = 1 To Length(Str1)
+          char1 = UpperCase(Mid(Str1, Count1, 1))
+          Str3 = ""
+          hasChanged = False
+
+          For Count2 = 1 To Length(Str2)
+              char2 = UpperCase(Mid(Str2, Count2, 1))
+              If char2 <> char1 
+                Then
+                  Str3 = Str3 & char2
+                Else
+                    If hasChanged = False 
+                      Then
+                           hasChanged = True
+                      Else
+                          Str3 = Str3 & char2
+                    End If
+                End If
+          Next
+          Str2 = Str3
+      Next
+      If Str2 = "" 
+        Then
+            OUTPUT "The 2 strings are Anagram to Each Other"
+        Else
+            OUTPUT "The 2 strings are not Anagram to Each Other"
+      End If
+End If
