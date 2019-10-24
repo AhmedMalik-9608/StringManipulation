@@ -36,4 +36,4 @@ Next
 
         OUTPUT "There are " & Letter & " letters in the string"
 
-        OUTPUT "There are " & Special & " special Characters and spaces in this string"
+        OUTPUT "There are " & Special & " special Characters and spaces in this string."
