@@ -13,7 +13,7 @@ Str1 = ""
 CurrentChar = ""
 
 OUTPUT "Enter the String: "
-INPUT tr1 
+INPUT Str1 
 
 For Count = 1 To Length(Str1)
     CurrentChar = Mid(Str1, Count, 1)
